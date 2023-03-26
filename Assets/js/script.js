@@ -32,9 +32,10 @@ $(document).ready(function () {
     saveInput = saveInput.filter(({ time }) => time !== saveTime);
     saveInput.push(userInput);
     localStorage.setItem("userInput", JSON.stringify(saveInput));
-
   });
-  //
+
+
+
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
@@ -67,7 +68,7 @@ $(document).ready(function () {
   }
 
 
-  //
+
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
@@ -76,11 +77,10 @@ $(document).ready(function () {
     saveInput.forEach(function(entry){
       $(".time-block").get(entry.time - 9).children[1].textContent = entry.note;
 
-      
+
       // $(".time-block").get(entry.time - 9).text = entry.note;
       // $(".time-block").get(entry.time - 9).children[1].val(entry.note) ;
     })
-
   }
 
 
